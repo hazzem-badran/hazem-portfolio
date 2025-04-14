@@ -1,4 +1,5 @@
-export const MY_SKILLS = ["JavaScript",
+export const MY_SKILLS = [
+  "JavaScript",
   "TypeScript",
   "HTML",
   "CSS",
@@ -9,4 +10,6 @@ export const MY_SKILLS = ["JavaScript",
   "styled-components",
   "Next.js",
   "Git & GitHub",
-  "Tailwind CSS",]
+  "Tailwind CSS",
+  "Redux",
+]

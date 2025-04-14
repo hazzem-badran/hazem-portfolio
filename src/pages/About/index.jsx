@@ -1,11 +1,11 @@
 import React from "react";
 import MenuButton from "../../components/MenuButton";
-import MyImage from "../../assets/images/hazem.png";
 import HeadingSection from "../../components/HeadingSection";
 import "./style.css";
 import Skills from "../../components/Skills";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import MyImage from "../../assets/images/hazem.png";
 import { useMenuStore } from "../../store/useMenuStore";
 
 const About = () => {
@@ -41,8 +41,6 @@ const About = () => {
               </p>
 
               <Skills />
-
-              
 
               <>
                 <div className="about__tabs">
@@ -182,17 +180,21 @@ const About = () => {
                       <div className="timeline">
                         <div className="timeline-item">
                           <h4 className="date">
-                            E-commerce Web APP :
-                            <span>PHP and vanilla JavaScript </span>
+                            Areisto – Company Portfolio Website
+                            <span> </span>
                           </h4>
                           <p>
-                            Had solve an issue for a client in the e-commerce
-                            website, the issue was related to the payment
-                            gateway and the shipping method. Technology Used :
-                            PHP, JavaScript, MySQL.
+                            I worked on designing and developing the official
+                            website for Areisto during my internship with the
+                            company. The goal of the website was to showcase the
+                            company’s services and projects.
+                            <br />
+                            Used: React.js, Next js, TypeScript, Tailwind CSS, Framer Motion, Redux
+                            
                           </p>
-                          <a href="https://github.com/z4dev/phone_e_web_site">
-                            review code
+
+                          <a href="https://areisto-portfolio.vercel.app"className="btn" >
+                            Link
                           </a>
                         </div>
                       </div>

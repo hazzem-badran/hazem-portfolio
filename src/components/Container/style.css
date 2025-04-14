@@ -53,7 +53,7 @@ section {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #e02f6b;
+  background-color: var(--primary-color);;
 }
 
 .bg-circles {
@@ -81,10 +81,11 @@ section {
   animation: zoomInOut 8s linear infinite;
 }
 
+
 .bg-circles .circle-2 {
   height: 8rem;
   width: 8rem;
-  background-color: #e02f6b;
+  background-color: var(--primary-color);;
   left: 30%;
   top: 50%;
   opacity: 0.4;
@@ -189,3 +190,4 @@ section {
   gap: 15px;
   flex-wrap: wrap;
 }
+

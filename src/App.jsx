@@ -1,14 +1,18 @@
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
-import Home from "./pages/Home";
 import Container from "./components/Container";
 import { Route, Routes } from "react-router-dom";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Loader from "./components/Loader";
+import { lazy, Suspense } from "react";
 
 function App() {
+  
+  const Home = lazy(() => import("./pages/Home"));
+  const About = lazy(() => import("./pages/About"));
+  const Contact = lazy(() => import("./pages/Contact"));
+
   return (
-    <>
+    <Suspense fallback={<Loader />}>
       <Container>
         <Routes>
           <Route index element={<Home />} />
@@ -16,7 +20,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Container>
-    </>
+    </Suspense>
   );
 }
 

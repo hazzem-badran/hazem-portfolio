@@ -1,10 +1,9 @@
 import React from "react";
-import './style.css'
+import "./style.css";
 
-const Container = ({children}) => {
+const Container = ({ children }) => {
   return (
     <>
-    
       <div className="overlay"></div>
       <div className="bg-circles">
         <div className="circle-1"></div>
