@@ -1,0 +1,12 @@
+export const MY_SKILLS = ["JavaScript",
+  "TypeScript",
+  "HTML",
+  "CSS",
+  "React js",
+  "React Native",
+  "MUI",
+  "Postman API",
+  "styled-components",
+  "Next.js",
+  "Git & GitHub",
+  "Tailwind CSS",]

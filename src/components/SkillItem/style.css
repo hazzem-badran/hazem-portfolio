@@ -1,0 +1,11 @@
+
+.skill-item {
+  background-color: #ffffff40;
+  border: 1px solid #ffffff66;
+  border-radius: 20px;
+  margin: 0 10px 10px 0;
+  padding: 5px 15px;
+  text-transform: capitalize;
+  cursor: pointer;
+  position: relative;
+}
