@@ -8,6 +8,7 @@
   display: flex;
   justify-content: space-around;
   gap: 4rem;
+  padding-inline: 3.7rem;
 }
 
 .about__img {
@@ -27,17 +28,13 @@
 .about__info {
   width: 60%;
 
-  p {
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 300;
-    letter-spacing: normal;
-  }
+  
 }
 
 @media (max-width: 767px) {
   .about__content {
     flex-wrap: wrap;
+    padding-inline: unset;
   }
 
   .about__img {

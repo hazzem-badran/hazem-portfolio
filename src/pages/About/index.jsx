@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import MyImage from "../../assets/images/hazem.png";
 import { useMenuStore } from "../../store/useMenuStore";
+import AboutMe from "../../components/Pages/About/AboutMe";
 
 const About = () => {
   const [education, setEducation] = useState(true);
@@ -30,15 +31,7 @@ const About = () => {
             </div>
 
             <div className="about__info">
-              <p>
-                <strong>I am Hazem Badran</strong>, a dedicated JavaScript and
-                TypeScript developer with a fervent enthusiasm for frontend
-                development. Over the past two years, I've honed my skills in
-                React.js and React Native, crafting robust and scalable
-                solutions. I'm deeply passionate about leveraging the power of
-                these technologies to create innovative and efficient software
-                solutions.
-              </p>
+              <AboutMe/>
 
               <Skills />
 
@@ -129,7 +122,7 @@ const About = () => {
                       </div>
                     </div>
                   ) : internShip ? (
-                    <div className="tab-content active" id="education">
+                    <div className="tab-content active" id="internship">
                       <div className="timeline">
                         <div className="timeline-item">
                           <span className="date">05/2024 – 06/2024</span>
@@ -176,7 +169,7 @@ const About = () => {
                       </div>
                     </div>
                   ) : projects ? (
-                    <div className="tab-content active" id="education">
+                    <div className="tab-content active" id="projects">
                       <div className="timeline">
                         <div className="timeline-item">
                           <h4 className="date">
