@@ -1,7 +1,8 @@
 import React from "react";
 import "./style.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { SOCIALS } from "../../constant/socials";
+import { SOCIALS } from "../../../../constant/socials";
+import Button from "../../../Button";
 
 const ContactInfo = () => {
   return (
@@ -24,6 +25,9 @@ const ContactInfo = () => {
           ))}
         </div>
       </div>
+      <Button stylee="btn__secondary" >
+      See My CV
+      </Button>
     </div>
   );
 };

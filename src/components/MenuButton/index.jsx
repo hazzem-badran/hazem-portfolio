@@ -7,29 +7,36 @@ import "./style.css";
 
 const MenuButton = () => {
   const { isMenuOpen, toggleMenu } = useMenuStore();
+
+  const handleLinkClick = () => {
+    setTimeout(toggleMenu, 100);
+  };
   return (
     <>
       <div className="menu__icon" onClick={toggleMenu}>
-      {/* <FontAwesomeIcon icon="fa-light " /> */}
         {isMenuOpen ? (
           <FontAwesomeIcon icon={faXmark} className="icon__color" />
         ) : (
-          // <FontAwesomeIcon icon={faBars} className="icon__color" />
           <FontAwesomeIcon icon={faBars} className="icon__color" />
         )}
       </div>
       {isMenuOpen && (
         <div className="menu">
-          <ul className="menu__ul" onClick={toggleMenu}>
+          <ul className="menu__ul">
             <li>
-              <Link to={"/"}>Home</Link>
+              <Link to={"/"} onClick={handleLinkClick}>
+                Home
+              </Link>
             </li>
             <li>
-              <Link to={"/about"}>About</Link>
+              <Link to={"/about"} onClick={handleLinkClick}>
+                About
+              </Link>
             </li>
-            {/* <li>cradtiol</li> */}
             <li>
-              <Link to={"/contact"}>Contact</Link>
+              <Link to={"/contact"} onClick={handleLinkClick}>
+                Contact
+              </Link>
             </li>
           </ul>
         </div>

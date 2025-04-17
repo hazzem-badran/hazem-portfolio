@@ -1,7 +1,7 @@
 import React from "react";
 import SkillItem from "../SkillItem";
 import "./style.css";
-import { MY_SKILLS } from "../../constant/skills";
+import { MY_SKILLS } from "../../../../constant/skills";
 
 const Skills = () => {
   return (

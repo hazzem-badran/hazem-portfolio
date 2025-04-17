@@ -1,4 +1,4 @@
-section {
+ section {
   background-color: #ffffff40;
   border: 1px solid #fff6;
   min-height: calc(100vh - 70px);
@@ -72,19 +72,29 @@ section {
 }
 
 .bg-circles .circle-1 {
-  height: 6rem;
-  width: 6rem;
+  height: 3.5rem;
+  width: 3.5rem;
   background-color: #0062b9;
-  left: 5%;
+  left: 11%;
   top: 10%;
   opacity: 0.3;
-  animation: zoomInOut 8s linear infinite;
+  animation: shrinkGrow 8s linear infinite;
+}
+
+@keyframes shrinkGrow {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
 }
 
 
+
 .bg-circles .circle-2 {
-  height: 8rem;
-  width: 8rem;
+  height: 4rem;
+  width: 4rem;
   background-color: var(--primary-color);;
   left: 30%;
   top: 50%;
@@ -93,20 +103,20 @@ section {
 }
 
 .bg-circles .circle-3 {
-  height: 12rem;
-  width: 12rem;
+  height: 8rem;
+  width: 8rem;
   background-color: #fff;
   top: 40%;
-  right: -6rem;
+  right: 2.1rem;
   opacity: 0.6;
 }
 
 .bg-circles .circle-4 {
-  height: 5rem;
-  width: 5rem;
+  height: 3.2rem;
+  width: 3.2rem;
   background-color: #ffa500;
   top: 80%;
-  left: -3rem;
+  left: 1rem;
   opacity: 0.6;
   animation: bounceRight 8s infinite linear;
 }

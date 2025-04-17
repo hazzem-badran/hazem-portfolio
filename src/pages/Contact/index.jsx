@@ -1,16 +1,16 @@
 import React from "react";
 import MenuButton from "../../components/MenuButton";
 import HeadingSection from "../../components/HeadingSection";
-import Form from "../../components/Form";
-import ContactInfo from "../../components/ContactInfo";
+import ContactInfo from "../../components/Pages/Contact/ContactInfo";
 import "./style.css";
 import { useMenuStore } from "../../store/useMenuStore";
+import Form from "../../components/Pages/Contact/Form";
 
 const Contact = () => {
   const { isMenuOpen } = useMenuStore();
 
   return (
-    <div className="style__section">
+    <div className="style__section fade-in">
       <MenuButton />
 
       <div className="contact">

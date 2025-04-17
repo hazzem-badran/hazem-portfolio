@@ -4,7 +4,9 @@ import "./style.css";
 const Container = ({ children }) => {
   return (
     <>
-      <div className="overlay"></div>
+      <div className="overlay">
+        
+      </div>
       <div className="bg-circles">
         <div className="circle-1"></div>
         <div className="circle-2"></div>

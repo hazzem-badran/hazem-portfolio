@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
@@ -11,11 +14,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --primary-color: #e02f6b; 
-  /* --primary-color: #61DAFBx;  */
+  --primary-color: #e02f6b;
+  --thiry-color: #E8F9FF;
   --secondary-color: #2ecc71;
-  /* --background-color: #ecf0f1; */
   --text-color: #18293C;
+  /* --background-color: #ecf0f1; */
 }
 
 
@@ -30,6 +33,9 @@
 }
 
 html {
+  scroll-behavior: smooth;
+}
+/* html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
@@ -51,7 +57,7 @@ html {
   html {
     font-size: 65%;
   }
-}
+} */
 
 body {
   line-height: 1.5;
@@ -99,7 +105,8 @@ textarea {
 
 .style__section {
   position: relative;
-  padding: 8rem 4rem;
+  /* padding: 8rem 4rem; */
+  margin-inline:  100px;
   background-color: #ffffff40;
   border: 1px solid #ffffff40;
   /* min-height: calc(100vh - 70px)!important; */
@@ -108,18 +115,40 @@ textarea {
   backdrop-filter: blur(5px);
   display: flex;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
+
 }
 
+.btn__default {
+  background-color: var(--primary-color);
+  color: white;
 
-.btn {
+  &:hover {
+    color: var(--primary-color);
+    background-color: rgb(255 255 255 / 25%);
+    border: 1px solid var(--primary-color);
+
+  }
+}
+
+.btn__secondary {
+  color: var(--primary-color);
+  background-color: rgb(255 255 255 / 25%);
+  border: 1px solid var(--primary-color);
+
+  &:hover {
+    background-color: var(--primary-color);
+    color: white;
+  }
+}
+
+.btn__default,
+.btn__secondary {
   line-height: 1.5;
-  background-color: #F75A5A;
-  /* border: 1px solid rgba(255 255 255 / 0.4); */
-  padding: 14px 28px;
+  padding: 12px 28px;
+  margin-block: 16px;
   display: inline-block;
-  color: #fff;
-  font-weight: 500;
+  font-weight: 700;
   text-transform: capitalize;
   font-family: inherit;
   font-size: 16px;
@@ -137,11 +166,7 @@ textarea {
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
-  border-radius: 15px;
-
-  /* &:hover {
-    color: #fff;
-  } */
+  border-radius: 25px;
 }
 
 
@@ -171,3 +196,14 @@ textarea {
   color: #0000ff;
   line-height: 1.5;
 } */
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
