@@ -2,8 +2,8 @@ import React from "react";
 
 const AboutMe = () => {
   return (
-    // <p className="text-lg leading-6 font-light">
-    <p className="text-[17px] leading-[24px]">
+    <p className="text-lg leading-6 font-light">
+    {/* // <p className="text-[17px] leading-[24px]"> */}
       <strong>I'm Hazem Badran</strong>, a <strong>JavaScript</strong> and{" "}
       <strong>TypeScript</strong> developer specializing in{" "}
       <strong>React.js</strong> and <strong>React Native</strong>. I build{" "}

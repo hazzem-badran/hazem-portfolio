@@ -25,9 +25,9 @@ const ContactInfo = () => {
           ))}
         </div>
       </div>
-      <Button stylee="btn__secondary" >
+      {/* <Button stylee="btn__secondary" >
       See My CV
-      </Button>
+      </Button> */}
     </div>
   );
 };

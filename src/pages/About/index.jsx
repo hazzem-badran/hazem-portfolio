@@ -58,20 +58,6 @@ const About = () => {
                 {tabs.find((tab) => tab.key === activeTab)?.component}
               </div>
 
-              {/* <div className="btns">
-                <a
-                  href="https://drive.google.com/file/d/1pqJjCnwkSoZQ4yvW9vdNOB0Bzrf7Nu7I/view"
-                  className="btn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  See My CV
-                </a>
-                <Link to="/contact" className="btn link-item">
-                  Contact Me
-                </Link>
-
-              </div> */}
 
               <Button stylee="btn__secondary" navigateTo={PATHS.CONTACT.ROOT}>
                 Contact Me

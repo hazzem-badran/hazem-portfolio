@@ -2,7 +2,7 @@ import React from "react";
 import MenuButton from "../../components/MenuButton";
 import HeadingSection from "../../components/HeadingSection";
 import ContactInfo from "../../components/Pages/Contact/ContactInfo";
-import "./style.css";
+// import "./style.css";
 import { useMenuStore } from "../../store/useMenuStore";
 import Form from "../../components/Pages/Contact/Form";
 
@@ -18,7 +18,7 @@ const Contact = () => {
           <>
             <HeadingSection title="Contact Me" />
 
-            <div className="contact__content">
+            <div className="flex gap-[4rem]  flex-wrap-reverse md:flex-nowrap">
               <Form />
               <ContactInfo />
             </div>
