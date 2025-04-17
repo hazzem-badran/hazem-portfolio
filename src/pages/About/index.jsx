@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import MenuButton from "../../components/MenuButton";
-import HeadingSection from "../../components/HeadingSection";
+// import HeadingSection from "../../components/HeadingSection";
 // import Skills from "../../components/Skills";
 import Skills from "../../components/Pages/About/Skills";
 import AboutMe from "../../components/Pages/About/AboutMe";
@@ -13,6 +13,7 @@ import MyImage from "../../assets/images/hazem.png";
 import "./style.css";
 import Button from "../../components/Button";
 import { PATHS } from "../../constant/paths";
+import HeadingSection from "../../components/HeadingSection";
 
 const tabs = [
   { key: "education", label: "Education", component: <Education /> },
