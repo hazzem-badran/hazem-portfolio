@@ -97,6 +97,7 @@ textarea {
 @media (max-width: 1200px) {
   .style__section {
     margin-inline: 0;
+    padding-inline: 1rem;
   }
 }
 
