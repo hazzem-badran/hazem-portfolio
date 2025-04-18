@@ -32,6 +32,7 @@ const Home = () => {
                 src={MyImage}
                 alt="profile-img"
                 className="w-48 h-48 rounded-full object-cover select-none"
+                loading="eager"
               />
             </div>
           </div>
@@ -40,5 +41,5 @@ const Home = () => {
     </section>
   );
 };
-
+  
 export default Home;
