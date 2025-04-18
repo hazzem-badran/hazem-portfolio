@@ -59,7 +59,6 @@ const About = () => {
                 {tabs.find((tab) => tab.key === activeTab)?.component}
               </div>
 
-
               <Button stylee="btn__secondary" navigateTo={PATHS.CONTACT.ROOT}>
                 Contact Me
               </Button>
