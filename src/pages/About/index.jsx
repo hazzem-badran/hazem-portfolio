@@ -6,7 +6,8 @@ import MenuButton from "../../components/MenuButton";
 import Skills from "../../components/Pages/About/Skills";
 import AboutMe from "../../components/Pages/About/AboutMe";
 import Education from "../../components/Pages/About/Education";
-import Intership from "../../components/Pages/About/InterShip";
+// import Intership from "../../components/Pages/About/InterShip";
+import Intership from "../../components/Pages/About/Intership"
 import Projects from "../../components/Pages/About/Projects";
 import { useMenuStore } from "../../store/useMenuStore";
 import MyImage from "../../assets/images/hazem.png";

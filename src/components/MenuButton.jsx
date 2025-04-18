@@ -14,7 +14,7 @@ const MenuButton = () => {
   return (
     <>
       <div
-        className="absolute right-12 top-5 w-10 h-10 cursor-pointer rounded-full bg-[#E8F9FF] border border-white flex items-center justify-center z-10 transition-opacity duration-500"
+        className="absolute right-6 top-5 w-10 h-10 cursor-pointer rounded-full bg-[#E8F9FF] border border-white flex items-center justify-center z-10 transition-opacity duration-500"
         onClick={toggleMenu}
       >
         {isMenuOpen ? (
