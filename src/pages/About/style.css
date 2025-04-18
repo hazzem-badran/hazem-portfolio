@@ -20,7 +20,8 @@
     max-width: 380px;
     height: 380px;
     object-fit: cover;
-    border-radius: 3px;
+    border-radius: 8px;
+    border: solid 1px var(--thiry-color);
 
   }
 }
