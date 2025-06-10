@@ -16,13 +16,13 @@ const Home = () => {
         <div className="flex flex-col-reverse lg:flex-row lg:justify-around lg:items-center w-full lg:gap-0 gap-14 lg:pr-[4rem]">
           <div className="flex flex-col items-center justify-between text-center gap-4">
             <p className="text-lg font-semibold leading-7 m-0">👋 Hello, I'm</p>
-            <h1 className="text-4xl lg:text-5xl font-bold leading-tight tracking-wide m-0">
+            <h1 name="nameH1" className="text-4xl lg:text-5xl font-bold leading-tight tracking-wide m-0" >
               Hazem Badran
             </h1>
             <h2 className="text-sm lg:text-base font-normal leading-6 text-gray-600 m-0">
-              React.js & React Native Specialist | Tech Content Creator.
+              React.js & React Native Specialist | Product-minded Developer.
             </h2>
-            <Button stylee="btn__secondary" navigateTo={PATHS.ABOUT.ROOT}>
+            <Button id="btnAboutMe" stylee="btn__secondary" name="nameAbout" navigateTo={PATHS.ABOUT.ROOT}>
               More About Me
             </Button>
           </div>
