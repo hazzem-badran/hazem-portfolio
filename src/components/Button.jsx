@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Button = ({ stylee, type = "button", children, navigateTo, id }) => {
+const Button = ({ stylee, type = "button", children, navigateTo, id, name }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -11,7 +11,7 @@ const Button = ({ stylee, type = "button", children, navigateTo, id }) => {
   };
 
   return (
-    <button id={id} type={type || "button"} className={`${stylee}`} onClick={handleClick}>
+    <button id={id} type={type || "button"} name={name} className={`${stylee}`} onClick={handleClick}>
       {children}
     </button>
   );
