@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo, useMemo, useCallback } from "react";
 import { Link } from "react-router-dom";
 import MenuButton from "../../components/MenuButton";
 // import HeadingSection from "../../components/HeadingSection";
@@ -22,9 +22,18 @@ const tabs = [
   { key: "projects", label: "Projects", component: <Projects /> },
 ];
 
-const About = () => {
+const About = memo(() => {
   const [activeTab, setActiveTab] = useState("education");
   const { isMenuOpen } = useMenuStore();
+
+  const activeTabComponent = useMemo(() => 
+    tabs.find((tab) => tab.key === activeTab)?.component,
+    [activeTab]
+  );
+
+  const handleTabClick = useCallback((key) => {
+    setActiveTab(key);
+  }, []);
 
   return (
     <section className="style__section fade-in" id="about" name="aboutSection">
@@ -41,6 +50,9 @@ const About = () => {
                 alt="Hazem" 
                 id="about-profile-img"
                 name="aboutProfileImage"
+                loading="lazy"
+                width="200"
+                height="200"
               />
             </div>
 
@@ -55,7 +67,7 @@ const About = () => {
                     id={`tab-${key}`}
                     name={`tab${key.charAt(0).toUpperCase() + key.slice(1)}`}
                     className={`tab__item ${activeTab === key ? "active" : ""}`}
-                    onClick={() => setActiveTab(key)}
+                    onClick={() => handleTabClick(key)}
                   >
                     {label}
                   </button>
@@ -67,7 +79,7 @@ const About = () => {
                 id="tab-content-container"
                 name="tabContentContainer"
               >
-                {tabs.find((tab) => tab.key === activeTab)?.component}
+                {activeTabComponent}
               </div>
 
               <Button 
@@ -84,6 +96,6 @@ const About = () => {
       )}
     </section>
   );
-};
+});
 
 export default About;

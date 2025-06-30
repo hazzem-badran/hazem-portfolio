@@ -1,13 +1,14 @@
-import React from "react";
+import React, { memo } from "react";
 // import { Link } from 'react-router-dom'
 // import "./style.css";
 import MyImage from "../../assets/images/hazem.png";
 import MenuButton from "../../components/MenuButton";
+import OptimizedImage from "../../components/OptimizedImage";
 import { useMenuStore } from "../../store/useMenuStore";
 import { PATHS } from "../../constant/paths";
 import Button from "../../components/Button";
 
-const Home = () => {
+const Home = memo(() => {
   const { isMenuOpen } = useMenuStore();
   return (
     <section className="style__section fade-in" id="home">
@@ -27,12 +28,14 @@ const Home = () => {
             </Button>
           </div>
           <div className="flex justify-center items-center">
-            <div className="flex bg-[#E8F9FF] shadow-lg rounded-full p-2">
-              <img
+            <div className="flex bg-[#E8F9FF] shadow-lg rounded-full p-2" >
+              <OptimizedImage
                 src={MyImage}
                 alt="profile-img"
                 className="w-48 h-48 rounded-full object-cover select-none"
                 loading="eager"
+                width={192}
+                height={192}
               />
             </div>
           </div>
@@ -40,6 +43,6 @@ const Home = () => {
       )}
     </section>
   );
-};
+});
   
 export default Home;

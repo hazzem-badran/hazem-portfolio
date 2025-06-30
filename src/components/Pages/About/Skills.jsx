@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import SkillItem from "./SkillItem";
 import { MY_SKILLS } from "../../../constant/skills";
 
-const Skills = () => {
+const Skills = memo(() => {
   return (
     <div id="skills-section" name="skillsSection">
       <h3 
@@ -18,12 +18,12 @@ const Skills = () => {
         name="skillsContainer"
       >
         {MY_SKILLS.map((skill, index) => (
-          <SkillItem key={index} skill={skill} index={index} />
+          <SkillItem key={skill} skill={skill} index={index} />
         ))}
       </span>
     </div>
   );
-};
+});
 
 export default Skills;
 

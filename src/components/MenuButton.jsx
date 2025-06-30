@@ -1,16 +1,16 @@
-import React from "react";
+import React, { memo, useCallback } from "react";
 import { useMenuStore } from "../store/useMenuStore";
 import { Link } from "react-router-dom";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {LINKS } from "../constant/links"
 
-const MenuButton = () => {
+const MenuButton = memo(() => {
   const { isMenuOpen, toggleMenu } = useMenuStore();
 
-  const handleLinkClick = () => {
+  const handleLinkClick = useCallback(() => {
     setTimeout(toggleMenu, 100);
-  };
+  }, [toggleMenu]);
   return (
     <>
       <div
@@ -68,6 +68,6 @@ const MenuButton = () => {
       )}
     </>
   );
-};
+});
 
 export default MenuButton;

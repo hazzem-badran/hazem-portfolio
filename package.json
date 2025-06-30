@@ -1,13 +1,40 @@
 {
   "name": "hazem-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "2.0.0",
   "type": "module",
+  "description": "Modern, high-performance portfolio website showcasing professional experience, skills, and projects",
+  "author": {
+    "name": "Hazem Badran",
+    "email": "hazembadran2@gmail.com",
+    "url": "https://hazembadranbadran.netlify.app"
+  },
+  "keywords": [
+    "portfolio",
+    "react",
+    "vite",
+    "performance",
+    "responsive",
+    "modern",
+    "developer",
+    "frontend"
+  ],
+  "homepage": "https://hazembadranbadran.netlify.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hazembadran/portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hazembadran/portfolio/issues"
+  },
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "analyze": "vite build --mode analyze",
+    "build:prod": "vite build --mode production"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -34,6 +61,7 @@
     "globals": "^15.15.0",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
+    "terser": "^5.43.1",
     "vite": "^6.2.0"
   }
 }
