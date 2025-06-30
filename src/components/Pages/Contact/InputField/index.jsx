@@ -1,16 +1,16 @@
 import React from "react";
 import MsgError from "../../About/MsgError";
 
-const InputField = ({ type = "text", name, placeholder, error }) => {
+const InputField = ({ type = "text", name, placeholder, error, id, fieldName }) => {
   const isTextArea = type === "textarea";
 
   return (
-    <div className="input-group">
+    <div className="input-group" id={`${id}-group`} name={`${fieldName}Group`}>
       {isTextArea ? (
         <textarea
           className="input-control"
-          id={name}
-          name={name}
+          id={id || name}
+          name={name || fieldName}
           placeholder={placeholder}
           required
         ></textarea>
@@ -19,8 +19,8 @@ const InputField = ({ type = "text", name, placeholder, error }) => {
           type={type}
           placeholder={placeholder}
           className="input-control"
-          id={name}
-          name={name}
+          id={id || name}
+          name={name || fieldName}
           required
         />
       )}

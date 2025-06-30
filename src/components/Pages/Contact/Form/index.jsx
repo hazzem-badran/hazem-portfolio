@@ -46,7 +46,12 @@ async function formAction(prevState, formData) {
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
-    <Button id="send-messag" type="submit" stylee="btn__secondary">
+    <Button 
+      id="send-message-btn" 
+      name="sendMessageButton"
+      type="submit" 
+      stylee="btn__secondary"
+    >
       {!pending ? "Send Message" : "Sending..."}
     </Button>
   );
@@ -76,29 +81,42 @@ const Form = () => {
   return (
     <form
       className="contact__form"
-      id="contactForm"
+      id="contact-form"
+      name="contactForm"
       action={formActionDispatch}
     >
-      <InputField name="name" placeholder="Name" error={state?.errors?.name} />
+      <InputField 
+        name="name" 
+        placeholder="Name" 
+        error={state?.errors?.name}
+        id="name-input"
+        fieldName="nameInput"
+      />
       <InputField
         type="email"
         name="email"
         placeholder="Email"
         error={state?.errors?.email}
+        id="email-input"
+        fieldName="emailInput"
       />
       <InputField
         name="subject"
         placeholder="Subject"
         error={state?.errors?.subject}
+        id="subject-input"
+        fieldName="subjectInput"
       />
       <InputField
         type="textarea"
         name="message"
         placeholder="Message"
         error={state?.errors?.message}
+        id="message-input"
+        fieldName="messageInput"
       />
 
-      <div className="submit-btn">
+      <div className="submit-btn" id="submit-btn-container" name="submitButtonContainer">
         <SubmitButton />
       </div>
     </form>

@@ -27,26 +27,33 @@ const About = () => {
   const { isMenuOpen } = useMenuStore();
 
   return (
-    <section className="style__section fade-in" id="about">
+    <section className="style__section fade-in" id="about" name="aboutSection">
       <MenuButton />
 
       {!isMenuOpen && (
-        <div className="about">
+        <div className="about" id="about-container" name="aboutContainer">
           <HeadingSection title="About Me" />
 
-          <div className="about__content">
-            <div className="about__img">
-              <img src={MyImage} alt="Hazem" />
+          <div className="about__content" id="about-content" name="aboutContent">
+            <div className="about__img" id="about-image-container" name="aboutImageContainer">
+              <img 
+                src={MyImage} 
+                alt="Hazem" 
+                id="about-profile-img"
+                name="aboutProfileImage"
+              />
             </div>
 
-            <div className="about__info">
+            <div className="about__info" id="about-info" name="aboutInfo">
               <AboutMe />
               <Skills />
 
-              <div className="about__tabs">
-                {tabs.map(({ key, label }) => (
+              <div className="about__tabs" id="about-tabs" name="aboutTabs">
+                {tabs.map(({ key, label }, index) => (
                   <button
                     key={key}
+                    id={`tab-${key}`}
+                    name={`tab${key.charAt(0).toUpperCase() + key.slice(1)}`}
                     className={`tab__item ${activeTab === key ? "active" : ""}`}
                     onClick={() => setActiveTab(key)}
                   >
@@ -55,11 +62,20 @@ const About = () => {
                 ))}
               </div>
 
-              <div className="content__container">
+              <div 
+                className="content__container"
+                id="tab-content-container"
+                name="tabContentContainer"
+              >
                 {tabs.find((tab) => tab.key === activeTab)?.component}
               </div>
 
-              <Button stylee="btn__secondary" navigateTo={PATHS.CONTACT.ROOT}>
+              <Button 
+                stylee="btn__secondary" 
+                navigateTo={PATHS.CONTACT.ROOT}
+                id="contact-me-btn"
+                name="contactMeButton"
+              >
                 Contact Me
               </Button>
             </div>

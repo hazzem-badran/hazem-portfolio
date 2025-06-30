@@ -5,8 +5,16 @@ import { Fragment } from "react";
 
 const Education = () => {
   return (
-    <div className="tab-content active" id="education">
-      <div className="timeline">
+    <div 
+      className="tab-content active" 
+      id="education-tab" 
+      name="educationTab"
+    >
+      <div 
+        className="timeline"
+        id="education-timeline"
+        name="educationTimeline"
+      >
         {EDUCATION.map((item, index) => (
           <Fragment key={index}>
             <TimelineItem
@@ -16,6 +24,7 @@ const Education = () => {
               description={item.description}
               link={item.link.href}
               linkText={item.link.text}
+              index={index}
             />
           </Fragment>
         ))}
