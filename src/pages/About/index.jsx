@@ -1,12 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import MenuButton from "../../components/MenuButton";
-// import HeadingSection from "../../components/HeadingSection";
-// import Skills from "../../components/Skills";
 import Skills from "../../components/Pages/About/Skills";
 import AboutMe from "../../components/Pages/About/AboutMe";
 import Education from "../../components/Pages/About/Education";
-// import Intership from "../../components/Pages/About/InterShip";
 import Intership from "../../components/Pages/About/Intership"
 import Projects from "../../components/Pages/About/Projects";
 import { useMenuStore } from "../../store/useMenuStore";
@@ -23,7 +19,7 @@ const tabs = [
 ];
 
 const About = () => {
-  const [activeTab, setActiveTab] = useState("education");
+  const [activeTab, setActiveTab] = useState("internShip");
   const { isMenuOpen } = useMenuStore();
 
   return (
