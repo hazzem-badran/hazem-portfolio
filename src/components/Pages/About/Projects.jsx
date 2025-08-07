@@ -1,6 +1,21 @@
 import { PROJECTS } from "../../../constant/projects";
+import { useEffect, useState } from "react";
 
 const Projects = () => {
+  const [loadedImages, setLoadedImages] = useState(new Set());
+
+  const handleImageLoad = (index) => {
+    setLoadedImages(prev => new Set([...prev, index]));
+  };
+
+  useEffect(() => {
+  // تحميل مسبق للصور
+  PROJECTS.forEach((project) => {
+    const img = new Image();
+    img.src = project.image;
+  });
+}, []);
+
   return (
     <div className="tab-content active" id="projects">
       <div className="projects-grid" style={{
@@ -30,15 +45,41 @@ const Projects = () => {
               e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
             }}
           >
-            <img 
-              src={project.image}
-              alt={project.title}
-              style={{
-                width: '100%',
-                height: '250px',
-                objectFit: 'cover'
-              }}
-            />
+            <div style={{
+              width: '100%',
+              height: '250px',
+              backgroundColor: '#f3f4f6',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              position: 'relative'
+            }}>
+              {!loadedImages.has(index) && (
+                <div style={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
+                  color: '#9ca3af',
+                  fontSize: '14px'
+                }}>
+                  Loading...
+                </div>
+              )}
+              <img 
+                src={project.image}
+                alt={project.title}
+                loading="lazy"
+                onLoad={() => handleImageLoad(index)}
+                style={{
+                  width: '100%',
+                  height: '250px',
+                  objectFit: 'cover',
+                  opacity: loadedImages.has(index) ? 1 : 0,
+                  transition: 'opacity 0.3s ease'
+                }}
+              />
+            </div>
             <div style={{
               padding: '15px'
             }}>
@@ -50,18 +91,6 @@ const Projects = () => {
               }}>
                 {project.title}
               </h3>
-              {/* <p style={{
-                margin: '0',
-                fontSize: '14px',
-                color: '#6b7280',
-                lineHeight: '1.5',
-                display: '-webkit-box',
-                WebkitLineClamp: 3,
-                WebkitBoxOrient: 'vertical',
-                overflow: 'hidden'
-              }}>
-                {project.description}
-              </p> */}
             </div>
           </div>
         ))}
