@@ -6,7 +6,7 @@ import Education from "../../components/Pages/About/Education";
 import Intership from "../../components/Pages/About/Intership"
 import Projects from "../../components/Pages/About/Projects";
 import { useMenuStore } from "../../store/useMenuStore";
-import MyImage from "../../assets/images/hazem.png";
+import MyImage from "../../../public/assets/images/hazem.png";
 import "./style.css";
 import Button from "../../components/Button";
 import { PATHS } from "../../constant/paths";
@@ -45,7 +45,7 @@ const About = () => {
               <Skills />
 
               <div className="about__tabs" id="about-tabs" name="aboutTabs">
-                {tabs.map(({ key, label }, index) => (
+                {tabs.map(({ key, label }) => (
                   <button
                     key={key}
                     id={`tab-${key}`}

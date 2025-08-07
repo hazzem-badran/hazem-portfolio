@@ -1,5 +1,3 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import Container from "./components/Container";
 import { Route, Routes } from "react-router-dom";
 import Loader from "./components/Loader";

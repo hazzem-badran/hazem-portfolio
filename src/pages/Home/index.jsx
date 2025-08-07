@@ -1,7 +1,4 @@
-import React from "react";
-// import { Link } from 'react-router-dom'
-// import "./style.css";
-import MyImage from "../../assets/images/hazem.png";
+import MyImage from "../../../public/assets/images/hazem.png";
 import MenuButton from "../../components/MenuButton";
 import { useMenuStore } from "../../store/useMenuStore";
 import { PATHS } from "../../constant/paths";
