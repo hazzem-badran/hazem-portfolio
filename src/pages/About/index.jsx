@@ -4,6 +4,7 @@ import Skills from "../../components/Pages/About/Skills";
 import AboutMe from "../../components/Pages/About/AboutMe";
 import Education from "../../components/Pages/About/Education";
 import Intership from "../../components/Pages/About/Intership"
+// import Work from "../../components/Pages/About/Work"
 import Projects from "../../components/Pages/About/Projects";
 import { useMenuStore } from "../../store/useMenuStore";
 import MyImage from "../../../public/assets/images/hazem.png";
@@ -16,6 +17,7 @@ const tabs = [
   { key: "education", label: "Education", component: <Education /> },
   { key: "internShip", label: "Internship", component: <Intership /> },
   { key: "projects", label: "Projects", component: <Projects /> },
+  // { key: "work", label: "Work", component: <Work /> },
 ];
 
 const About = () => {
