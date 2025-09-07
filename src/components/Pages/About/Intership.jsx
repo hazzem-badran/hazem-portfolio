@@ -10,6 +10,7 @@ const Intership = () => {
         {INTERSHIP.map((item, index) => (
           <Fragment key={index}>
             <TimelineItem
+              date={item.date}
               title={item.title}
               description={item.description}
               link={item.link.href}
