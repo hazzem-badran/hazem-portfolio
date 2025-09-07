@@ -4,7 +4,6 @@ import Skills from "../../components/Pages/About/Skills";
 import AboutMe from "../../components/Pages/About/AboutMe";
 import Education from "../../components/Pages/About/Education";
 import Intership from "../../components/Pages/About/Intership"
-// import Work from "../../components/Pages/About/Work"
 import Projects from "../../components/Pages/About/Projects";
 import { useMenuStore } from "../../store/useMenuStore";
 import MyImage from "../../../public/assets/images/hazem.png";
@@ -12,16 +11,17 @@ import "./style.css";
 import Button from "../../components/Button";
 import { PATHS } from "../../constant/paths";
 import HeadingSection from "../../components/HeadingSection";
+import Career from "../../components/Pages/About/Career";
 
 const tabs = [
   { key: "education", label: "Education", component: <Education /> },
   { key: "internShip", label: "Internship", component: <Intership /> },
+  { key: "career", label: "Career", component: <Career /> },
   { key: "projects", label: "Projects", component: <Projects /> },
-  // { key: "work", label: "Work", component: <Work /> },
 ];
 
 const About = () => {
-  const [activeTab, setActiveTab] = useState("internShip");
+  const [activeTab, setActiveTab] = useState("career");
   const { isMenuOpen } = useMenuStore();
 
   return (
