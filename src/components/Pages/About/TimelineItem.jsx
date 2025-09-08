@@ -41,6 +41,7 @@ const TimelineItem = ({
       <p 
         id={`timeline-description-${index}`}
         name={`timelineDescription${index}`}
+        className="pb-2 "
       >
         {description}
       </p>
@@ -57,7 +58,7 @@ const TimelineItem = ({
         <a 
           href={link2} 
           target="_blank" 
-          className="text-blue-600 underline"
+          className="text-blue-600 underline "
           id={`timeline-link2-${index}`}
           name={`timelineLink2${index}`}
         >
